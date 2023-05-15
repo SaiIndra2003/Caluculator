@@ -42,21 +42,21 @@ buttons.forEach((item) => {
         break;
 
       case "power":
-        string = formula
-        let num = string.charAt(string.length - 1);
-        string = string.substring(0, string.length - 1);
+        let strimg = formula
+        let num = strimg.charAt(strimg.length - 1);
+        strimg = strimg.substring(0, strimg.length - 1);
         let i = 0
         while (i<nums.length){
-          let char = string.charAt(string.length - 1)
+          let char = strimg.charAt(strimg.length - 1)
           if( char === nums[i]){
             num = char + num;
-            string = string.substring(0, string.length - 1);
+            strimg = strimg.substring(0, strimg.length - 1);
             i=0;
             continue;
           }
           i++;
         }
-        formula = string;
+        formula = strimg;
         console.log(num);
         formula += "Math.pow("+num+",";
         ans += "^(";
@@ -100,7 +100,7 @@ buttons.forEach((item) => {
           display.innerText = "Empty!";
           setTimeout(() => (display.innerText = ""), 2000);
         }
-        
+
         break;
 
       default:
